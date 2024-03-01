@@ -1,0 +1,98 @@
+import { Version } from '@microsoft/sp-core-library';
+import {
+  type IPropertyPaneConfiguration,
+  PropertyPaneTextField
+} from '@microsoft/sp-property-pane';
+import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+
+import * as strings from 'HelloWorldWebPartStrings';
+
+import { HttpClient,HttpClientResponse } from "@microsoft/sp-http";
+
+export interface IHelloWorldWebPartProps {
+  description: string;
+}
+
+export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+
+
+
+  public render(): void {
+    this.domElement.innerHTML = `
+    <div>
+      <h1>Number api page</h1>
+      <input type="text" id="number">
+      <button id="getFact">Get Fact</button>
+      <div id="fact"></div>
+    </div>`;
+
+    const getFactButton = document.getElementById('getFact');
+    if (getFactButton) {
+      getFactButton.addEventListener('click', () => {
+        this.showFacts();
+      });
+    }
+  }
+
+  private async getFacts(no: string): Promise<any> {
+    try {
+      const response: HttpClientResponse = await this.context.httpClient
+      .get(`http://numbersapi.com/${no}?json`, HttpClient.configurations.v1);
+
+      if (response.ok) {
+        return await response.json();
+      } else {
+        throw new Error("Sorry, I have failed to keep my promise");
+      }
+    } catch (error) {
+      throw new Error("Sorry, I have failed to keep my promise");
+    }
+  }
+
+  private async showFacts() {
+    const numberInput = document.getElementById('number') as HTMLInputElement;
+    const factElement = document.getElementById('fact');
+
+    if (numberInput && factElement) {
+      const no = numberInput.value;
+
+      try {
+        const resp = await this.getFacts(no);
+        console.log(resp);
+        factElement.innerHTML = resp.text;
+      } catch (error) {
+        console.log(error);
+        factElement.innerHTML = error.message;
+      }
+    }
+  }
+
+ 
+
+  
+  protected get dataVersion(): Version {
+    return Version.parse('1.0');
+  }
+
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+    return {
+      pages: [
+        {
+          header: {
+            description: strings.PropertyPaneDescription
+          },
+          groups: [
+            {
+              groupName: strings.BasicGroupName,
+              groupFields: [
+                PropertyPaneTextField('description', {
+                  label: strings.DescriptionFieldLabel
+                })
+              ]
+            }
+          ]
+        }
+      ]
+    };
+  }
+}

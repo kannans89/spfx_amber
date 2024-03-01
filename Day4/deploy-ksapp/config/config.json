@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "deploy-ks-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/deployKsApp/DeployKsAppWebPart.js",
+          "manifest": "./src/webparts/deployKsApp/DeployKsAppWebPart.manifest.json"
+        }
+      ]
+    },
+    "comments-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/commentsApp/CommentsAppWebPart.js",
+          "manifest": "./src/webparts/commentsApp/CommentsAppWebPart.manifest.json"
+        }
+      ]
+    },
+    "sentiments-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sentimentsApp/SentimentsAppWebPart.js",
+          "manifest": "./src/webparts/sentimentsApp/SentimentsAppWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DeployKsAppWebPartStrings": "lib/webparts/deployKsApp/loc/{locale}.js",
+    "CommentsAppWebPartStrings": "lib/webparts/commentsApp/loc/{locale}.js",
+    "SentimentsAppWebPartStrings": "lib/webparts/sentimentsApp/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.19.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "deploy-ksapp",
+    "libraryId": "99daa00d-6ac4-487b-b3af-878e56dd2016",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "deploy-ksapp",
+    "solutionShortDescription": "deploy-ksapp description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

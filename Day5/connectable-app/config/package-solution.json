@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "connectable-app-client-side-solution",
+    "id": "cc9f0723-9c00-4eba-9deb-899faff51959",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "connectable-app description"
+      },
+      "longDescription": {
+        "default": "connectable-app description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "connectable-app Feature",
+        "description": "The feature that activates elements of the connectable-app solution.",
+        "id": "137ae197-68ed-4c15-a09d-4719da5547d7",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/connectable-app.sppkg"
+  }
+}

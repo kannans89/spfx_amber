@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "deploy-ksapp-client-side-solution",
+    "id": "99daa00d-6ac4-487b-b3af-878e56dd2016",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "deploy-ksapp description"
+      },
+      "longDescription": {
+        "default": "deploy-ksapp description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "deploy-ksapp Feature",
+        "description": "The feature that activates elements of the deploy-ksapp solution.",
+        "id": "316c3553-e4f6-4e79-9a79-568815f36e0f",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/deploy-ksapp.sppkg"
+  }
+}

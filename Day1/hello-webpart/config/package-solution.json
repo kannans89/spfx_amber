@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hello-webpart-client-side-solution",
+    "id": "501a708e-78dc-42d8-a0bc-ac6253ef0021",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "hello-webpart description"
+      },
+      "longDescription": {
+        "default": "hello-webpart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "hello-webpart Feature",
+        "description": "The feature that activates elements of the hello-webpart solution.",
+        "id": "fa71ed0f-be53-4055-8f5d-4522de227f1d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/hello-webpart.sppkg"
+  }
+}

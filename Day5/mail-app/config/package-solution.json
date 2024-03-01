@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mail-app-client-side-solution",
+    "id": "0e1a960f-683d-442f-8a26-a413573ed228",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mail-app description"
+      },
+      "longDescription": {
+        "default": "mail-app description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mail-app Feature",
+        "description": "The feature that activates elements of the mail-app solution.",
+        "id": "0b3298b6-44ed-4250-bdf1-68d513ce1394",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [ {
+      "resource": "Microsoft Graph",
+      "scope": "Mail.Read"
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/mail-app.sppkg"
+  }
+}

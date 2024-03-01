@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Number api page</h1>
+
+    <input type="text" id="number">
+    <button id="getFact" onclick="showFacts()">Get Fact</button>
+
+    <div id="fact"></div>
+    <script>
+        console.log("start of script ")
+        function getFacts(no) {
+            return new Promise(function (resolve, reject) {
+
+                let url = `http://numbersapi.com/${no}?json`;
+                let xhr = new XMLHttpRequest(); // Ajax request
+                xhr.open('GET', url);
+                xhr.onload = function () {
+                    if (xhr.status == 200) {
+                        resolve(xhr.responseText);
+                    }
+                    else {
+                        reject("Sorry, I have failed to keep my promise");
+                    }
+                }
+                xhr.send();
+            });
+
+        }
+
+       async function showFacts(){
+            var no = document.getElementById('number').value;
+
+           let resp= await getFacts(no);
+           let json = JSON.parse(resp)
+           document.getElementById('fact').innerHTML = json.text;
+           alert("showfacts with async/await");
+
+            //  getFacts(no)
+            //      .then(function (resp) {
+            //     console.log("inside then block")
+            //     console.log(resp);
+            //     let json = JSON.parse(resp);
+            //     document.getElementById('fact').innerHTML = json.text;
+            // })
+            // .catch(function (err) {
+            //     console.log("inside catch block")
+            //     console.log(err);
+            //     document.getElementById('fact').innerHTML = err;
+            // })
+
+            console.log("end of show facts ")
+        }
+
+       
+
+      
+    </script>
+   
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "counter-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/counter/CounterWebPart.js",
+          "manifest": "./src/webparts/counter/CounterWebPart.manifest.json"
+        }
+      ]
+    },
+    "country-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/country/CountryWebPart.js",
+          "manifest": "./src/webparts/country/CountryWebPart.manifest.json"
+        }
+      ]
+    },
+    "todos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/todos/TodosWebPart.js",
+          "manifest": "./src/webparts/todos/TodosWebPart.manifest.json"
+        }
+      ]
+    },
+    "external-web-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/externalWeb/ExternalWebWebPart.js",
+          "manifest": "./src/webparts/externalWeb/ExternalWebWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "angular": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js",
+      "globalName": "angular"
+    }
+  },
+  "localizedResources": {
+    "CounterWebPartStrings": "lib/webparts/counter/loc/{locale}.js",
+    "CountryWebPartStrings": "lib/webparts/country/loc/{locale}.js",
+    "TodosWebPartStrings": "lib/webparts/todos/loc/{locale}.js",
+    "ExternalWebWebPartStrings": "lib/webparts/externalWeb/loc/{locale}.js"
+  }
+}

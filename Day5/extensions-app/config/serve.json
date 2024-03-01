@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "customActions": {
+        "7f8f278d-818f-4083-ac6c-44f0f9cd2357": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "helloWorld": {
+      "pageUrl": "https://333gm2.sharepoint.com/sites/kannanteamsite/SitePages/EventPlanHome.aspx",
+      "customActions": {
+        "7f8f278d-818f-4083-ac6c-44f0f9cd2357": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message from Kannan"
+          }
+        }
+      }
+    },
+    "headerFooter": {
+      "pageUrl": "https://333gm2.sharepoint.com/sites/kannanteamsite/SitePages/EventPlanHome.aspx",
+      "customActions": {
+        "db8b6d44-7baa-4ddc-8d6a-c66b9250ee06": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message",
+            "Top": "This is the top content ",
+            "Bottom": "This is the bottom content"
+          }
+        }
+      }
+    },
+    "myfieldcust": {
+      "pageUrl": "https://333gm2.sharepoint.com/Lists/testFieldCustomizer/AllItems.aspx",
+      "fieldCustomizers": {
+        "percentage": {
+          "id": "635ff422-b48e-4660-973b-bbf6d6237aee",
+          "properties": {
+            "sampleText": "Hello World :"
+          }
+        }
+      }
+    },
+    "mycommand": {
+      "pageUrl": "https://333gm2.sharepoint.com/Lists/testFieldCustomizer/AllItems.aspx",
+      "customActions": {
+        "0ff3a3b7-3c58-4e1f-b9a2-a2c956101144": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}

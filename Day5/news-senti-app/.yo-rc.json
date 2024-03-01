@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.19.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "11-filter-news-and-senti",
+    "libraryId": "61c991fb-2358-410a-96fd-0a10349c0be8",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "11-filter-news-and-senti",
+    "solutionShortDescription": "11-filter-news-and-senti description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

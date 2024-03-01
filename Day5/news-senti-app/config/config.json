@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "news-cateogry-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newsCateogry/NewsCateogryWebPart.js",
+          "manifest": "./src/webparts/newsCateogry/NewsCateogryWebPart.manifest.json"
+        }
+      ]
+    },
+    "senti-news-display-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sentiNewsDisplay/SentiNewsDisplayWebPart.js",
+          "manifest": "./src/webparts/sentiNewsDisplay/SentiNewsDisplayWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NewsCateogryWebPartStrings": "lib/webparts/newsCateogry/loc/{locale}.js",
+    "SentiNewsDisplayWebPartStrings": "lib/webparts/sentiNewsDisplay/loc/{locale}.js"
+  }
+}

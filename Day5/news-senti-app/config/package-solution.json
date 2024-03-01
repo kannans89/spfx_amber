@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "11-filter-news-and-senti-client-side-solution",
+    "id": "61c991fb-2358-410a-96fd-0a10349c0be8",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "11-filter-news-and-senti description"
+      },
+      "longDescription": {
+        "default": "11-filter-news-and-senti description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "11-filter-news-and-senti Feature",
+        "description": "The feature that activates elements of the 11-filter-news-and-senti solution.",
+        "id": "08c5f83e-bc24-4e3c-97c2-2ff5e98d6b4d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/11-filter-news-and-senti.sppkg"
+  }
+}

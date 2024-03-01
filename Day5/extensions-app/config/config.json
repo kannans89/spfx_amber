@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-world-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/helloWorld/HelloWorldApplicationCustomizer.js",
+          "manifest": "./src/extensions/helloWorld/HelloWorldApplicationCustomizer.manifest.json"
+        }
+      ]
+    },
+    "header-footer-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/headerFooter/HeaderFooterApplicationCustomizer.js",
+          "manifest": "./src/extensions/headerFooter/HeaderFooterApplicationCustomizer.manifest.json"
+        }
+      ]
+    },
+    "myfieldcust-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/myfieldcust/MyfieldcustFieldCustomizer.js",
+          "manifest": "./src/extensions/myfieldcust/MyfieldcustFieldCustomizer.manifest.json"
+        }
+      ]
+    },
+    "mycommand-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/mycommand/MycommandCommandSet.js",
+          "manifest": "./src/extensions/mycommand/MycommandCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloWorldApplicationCustomizerStrings": "lib/extensions/helloWorld/loc/{locale}.js",
+    "HeaderFooterApplicationCustomizerStrings": "lib/extensions/headerFooter/loc/{locale}.js",
+    "MyfieldcustFieldCustomizerStrings": "lib/extensions/myfieldcust/loc/{locale}.js",
+    "MycommandCommandSetStrings": "lib/extensions/mycommand/loc/{locale}.js"
+  }
+}
