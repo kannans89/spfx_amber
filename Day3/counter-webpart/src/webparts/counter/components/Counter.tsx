@@ -18,6 +18,7 @@ export default class Counter extends React.Component<ICounterProps, ICounterStat
   }
  
   incrementCounter = () => {
+  
     this.setState((prevState) => ({
       count: prevState.count + 1
     }));

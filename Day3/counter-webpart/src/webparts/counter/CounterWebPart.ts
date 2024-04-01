@@ -24,7 +24,7 @@ export default class CounterWebPart extends BaseClientSideWebPart<ICounterWebPar
  
   public render(): void {
 
-
+     
     console.log(this.properties);
     
     const element: React.ReactElement<ICounterProps> = React.createElement(

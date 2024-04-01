@@ -1,0 +1,6 @@
+tsc -declaration bank_moudle.ts --module system
+ tsc --declaration bank_moudule.ts --module ES6
+
+tsc -init
+
+tsc promise_test_new.ts --target es6
