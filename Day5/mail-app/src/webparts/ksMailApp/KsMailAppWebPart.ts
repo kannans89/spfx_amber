@@ -31,13 +31,11 @@ export default class KsMailAppWebPart extends BaseClientSideWebPart<IKsMailAppWe
 
             this.domElement.innerHTML = `
     <div class="${styles.ksMailApp}">
-      <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-              The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
+      <div class="${styles.container}">
+          <h3 style="color: red;">Welcome to mail box of user ${this.context.pageContext.user.displayName} </h3>
+          <div id="spListContainer" />
       </div>
-      <div id="spListContainer" />
+      
     </div>`;
 
             // List the latest emails based on what we got from the Graph
@@ -52,7 +50,7 @@ export default class KsMailAppWebPart extends BaseClientSideWebPart<IKsMailAppWe
       
     for (let index = 0; index < messages.length; index++) {
       const decodedSubject = decodeURIComponent(messages[index].subject || "");
-      html += `<p class="${styles.welcome}">Email ${index + 1} - ${decodedSubject}</p>`;
+      html += `<p class="${styles.row}">Email ${index + 1} - ${decodedSubject}</p>`;
     }
   
     // Add the emails to the placeholder
