@@ -33,7 +33,7 @@ let _employeeListColumns = [
   {
     key: 'DeptTitleId',
     name: 'DeptTitleId',
-    fieldName: 'DeptTitleId',
+    fieldName: 'DEPTNO',
     minWidth: 50,
     maxWidth: 100,
     isResizable: true
@@ -87,6 +87,7 @@ export default class Employee extends React.Component<IEmployeeProps, IEmployeeS
         return response.json();
       })
       .then(json => {
+        console.log(json.value);
         return json.value;
       }) as Promise<IEmployee[]>;
   }
@@ -94,7 +95,7 @@ export default class Employee extends React.Component<IEmployeeProps, IEmployeeS
   public bindDetailsList(message: string) : void {
 
     this._getListItems().then(listItems => {
-            
+            console.log(listItems);
       this.setState({ EmployeeListItems: listItems,status: message,
         DeptTitleId: this.props.DeptTitleId.tryGetValue()+"" });
    

@@ -35,7 +35,7 @@ export default class Country extends React.Component<ICountryProps, ICountryStat
   }
   public async componentDidMount() {
     try {
-      const response: HttpClientResponse = await this.props.myhttpClient.get('https://restcountries.com/v3.1/all?fields=name,flags', HttpClient.configurations.v1);
+      const response: HttpClientResponse = await this.props.myhttpClient.get('https://restcountries.com/v3.1/all?fields=name,flags,languages', HttpClient.configurations.v1);
       const countries: ICountryResponse[] = await response.json();
 
       console.log("found " + countries.length)

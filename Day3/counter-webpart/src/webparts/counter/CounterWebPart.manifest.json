@@ -24,6 +24,7 @@
     "properties": {
       "description": "Counter Description",
       "heading":"This is heading of CounterApp(Manifest)",
+      "initialCounter":"27"
      
     }
   }]

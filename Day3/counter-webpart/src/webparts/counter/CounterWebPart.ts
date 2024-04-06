@@ -26,13 +26,14 @@ export default class CounterWebPart extends BaseClientSideWebPart<ICounterWebPar
 
      
     console.log(this.properties);
+    const counter= parseInt(this.properties.initialCounter.toString(),10);
     
     const element: React.ReactElement<ICounterProps> = React.createElement(
       Counter,
       {
         description: this.properties.description,
         heading:this.properties.heading,
-        initialCounter:this.properties.initialCounter
+        initialCounter:counter
       
       }
     );
